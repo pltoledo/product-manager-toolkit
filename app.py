@@ -112,8 +112,8 @@ class Home:
         st.write(
             """A partir do artigo [*How To Become a Peak Product Manager*](https://www.ravi-mehta.com/product-manager-skills/), do Ravi Mehta,
                  e do artigo recorte apresentado no curso de Product Manager da PM3 entitulado ***Qual é a sua forma? Guia do PM para o crescimento pessoal e da sua equipe***,
-                 construí esse app para facilitar a auto-avaliação de PMs nas skills apresentadas.
-                 """
+                construí esse app para facilitar a auto-avaliação de PMs nas skills apresentadas.
+            """
         )
         st.write(
             "Basta preencher o questionário abaixo, e ao final será gerada a visualização apresentada nos artigos:"
@@ -131,6 +131,13 @@ class Home:
             img_bytes = pio.to_image(fig, width=1000, scale=2, format="png")
             img_b64 = base64.b64encode(img_bytes).decode()
             st_auto_download(img_b64, "pm_toolkit_plot.png", "image/png")
+        cols = st.columns(10)
+        cols[4].markdown(
+            "[![Repo](https://img.icons8.com/material-outlined/48/000000/github.png)](https://github.com/pltoledo/product-manager-toolkit)"
+        )
+        cols[5].markdown(
+            "[![linkedin](https://img.icons8.com/color/48/linkedin.png)](https://linkedin.com/in/pedro-toledo)"
+        )
 
 
 if __name__ == "__main__":
